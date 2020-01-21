@@ -7,7 +7,7 @@ before_install:
   - echo "BEFORE INSTALL START"
   - gem install bundler
   - echo "BEFORE INSTALL END"      
-  - docker build -t test-react -f Dockerfile.dev .
+  - docker build -t react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true test-react npm test
+  - docker run -e CI=true react npm test
